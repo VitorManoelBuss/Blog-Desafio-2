@@ -1,0 +1,141 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; /* Remover fundo branco */
+  padding: 20px;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute; /* Para sobrepor o fundo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; /* Fundo transparente */
+  padding: 20px;
+  z-index: 100;
+}
+
+
+nav > div {
+  display: flex; /* Deixa o logo e o botão na mesma linha */
+  justify-content: space-between;
+  width: 100%; /* Ocupa toda a largura */
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  z-index: 10; /* Garante que fique acima do menu */
+}
+
+.nav-links {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #0d3b66;
+  padding: 20px;
+  text-align: left;
+  gap: 10px;
+  background: rgba(13, 59, 102, 0.8);
+}
+
+
+.nav-links.show {
+  display: flex;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hero {
+  padding: 60px 20px;
+  background: url("https://s3-alpha-sig.figma.com/img/a5fc/bde5/258262f42e8d47435151dd5e6c7fc8ba?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=oQTT75gl~E3azkfrQ8N3Fhm11Yc4NtWuNrtnJV38G4miOr8M7aIQTpLvGz9CoOxdmA0jZAgAF~8Kb2dtr-7TP75gDxLNcMARBlAqVfKr~5X0niv6AYyijBtFCzkWKnUhsf5OeYZn77tczxy2Vw5L-PNi8ppvbLaYJO0UbmjauNS2muXqn40l~bJqBar~chYyNYN5mMDt2uwBNk4ho6hSHF8o5z6Mrxfx2yPbL5stmEyaDrd6HMeYJhERSt2NxAM8VxL6WQ4tvnqr1ehxqQ4zGMbfZB~nLr6DO4oLLNMOmer7UPmoNn6baRmFuPQILYIQ9oLZH6ne0fCAYsA6-Zatkg__") -150px center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: calc(100vh - 100px);
+  text-align: justify;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.hero h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 313px; 
+  height: 117px;
+  line-height: 130%;
+  margin-right: 30px;
+}
+
+.hero p {
+  font-size: 14px;
+  width: 313px; 
+  height: 119px;
+  margin-bottom: 50px;
+  text-align:left;
+  margin-right: 30px;
+}
+
+.cta-button {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px; /* Mantém um tamanho fixo */
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
