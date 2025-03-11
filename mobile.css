@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,13 +12,17 @@ body {
   
 }
 
+
+
+
+
 /*HERO*/
 header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background: transparent; /* Remover fundo branco */
+  background: transparent; 
   padding: 20px;
   z-index: 100;
 }
@@ -27,20 +31,19 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute; /* Para sobrepor o fundo */
+  position: absolute; 
   top: 0;
   left: 0;
   width: 100%;
-  background: transparent; /* Fundo transparente */
+  background: transparent; 
   padding: 20px;
   z-index: 100;
 }
 
-
 nav > div {
-  display: flex; /* Deixa o logo e o botão na mesma linha */
+  display: flex;
   justify-content: space-between;
-  width: 100%; /* Ocupa toda a largura */
+  width: 100%; 
   align-items: center;
 }
 
@@ -51,7 +54,7 @@ nav > div {
 
 .menu-toggle {
   cursor: pointer;
-  z-index: 10; /* Garante que fique acima do menu */
+  z-index: 10; 
 }
 
 .nav-links {
@@ -68,7 +71,6 @@ nav > div {
   gap: 10px;
   background: rgba(13, 59, 102, 0.8);
 }
-
 
 .nav-links.show {
   display: flex;
@@ -129,7 +131,7 @@ nav > div {
   text-decoration: none;
   color: white;
   border: 2px solid white;
-  padding: 10px 20px; /* Mantém um tamanho fixo */
+  padding: 10px 20px; 
   border-radius: 50px;
   font-weight: bold;
   font-size: 14px;
@@ -141,29 +143,31 @@ nav > div {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/*ABOUT US*/
 
+
+
+
+/*ABOUT US*/
 .about-us {
-  background-color: #ffffff; /* Fundo branco */
+  background-color: #ffffff; 
   padding: 16px;
   text-align: left;
   border-radius: 10px;
   margin: 20px auto;
-  max-width: 600px; /* Mantém um tamanho semelhante ao da imagem */
-  font-family: Arial, sans-serif; /* Fonte mais limpa */
+  max-width: 600px; 
+  font-family: Arial, sans-serif; 
 }
 
 .about-us h1 {
   color: #101828;
   margin: 20px auto;
-  border-bottom: 0.2px solid grey;
+  border-bottom: 0.2px solid lightgrey;
   padding-bottom: 1rem;
   font-weight: 500;
   display: flex;
-  align-items: center; /* Alinha verticalmente */
-  gap: 15px; /* Adiciona um espaço entre o ícone e o texto */
+  align-items: center; 
+  gap: 15px; 
 }
-
 
 .about-us p {
   font-size: 15px;
@@ -174,31 +178,33 @@ nav > div {
   text-align: left;
 }
 
-/* Deixando os parágrafos alinhados como na imagem */
 .about-us p:last-child {
   margin-bottom: 0;
 }
 
-/*BLOG*/
 
+
+
+
+/*BLOG*/
 .blog {
-  background-color: #ffffff; /* Fundo branco */
+  background-color: #ffffff; 
   padding: 16px;
   text-align: left;
   border-radius: 10px;
   margin: 20px auto;
-  max-width: 600px; /* Mantém um tamanho semelhante ao da imagem */
-  font-family: Arial, sans-serif; /* Fonte mais limpa */
+  max-width: 600px; 
+  font-family: Arial, sans-serif; 
 }
 
 .blog h1 {
   color: #101828;
   margin: 20px 0 0 0;
-  border-bottom: 0.2px solid grey;
+  border-bottom: 0.2px solid lightgrey;
   padding-bottom: 1rem;
   font-weight: 500;
   display: flex;
-  align-items: center; /* Alinha verticalmente */
+  align-items: center; 
   gap: 15px;
 }
 
@@ -223,7 +229,7 @@ nav > div {
 }
 
 .blog-post p a {
-  color: #2276E3; /* Cor dos links */
+  color: #2276E3; 
   text-decoration: none;
   font-weight: 500;
 }
@@ -244,7 +250,133 @@ nav > div {
   transition: 0.3s ease-in-out;
 }
 
-/* Efeito de hover para destacar */
 .read-more:hover {
   background: linear-gradient(90deg, #233250, #101828);
+}
+
+
+
+
+
+/*OUR TEAM*/
+.team {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.team h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  color: #101828;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.2px solid lightgrey;
+  padding-bottom: 1rem;
+}
+
+.team-member-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.team-member {
+  background: white;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  object-position: 50% 20%; 
+  margin-bottom: 0.75rem;
+}
+
+.team-member h2 {
+  color: #101828;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.team-member p {
+  color: #667085;
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.social-icons-profile {
+  display: flex;
+  gap: 10px; 
+  justify-content: center;
+  margin-top: 10px; 
+}
+
+
+
+
+
+/*GET IN TOUCH*/
+.contact {
+  background-color: #101828;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.contact h1 {
+  color: white;
+  border-bottom: 0.2px solid lightgrey;
+  padding: 2rem 0 1rem 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center; 
+  gap: 15px;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.contact-item {
+  padding: 1rem 0 1rem 0;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+  align-content:center;
+}
+
+.contact-item h2 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.contact-item p {
+  color: #CECECE;
+  font-weight: 400;
+  font-size: 10.48px;
+  margin: 5px 0;
+  opacity: 0.8;
+}
+
+.contact-item a {
+  font-size: 10.48px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
 }
