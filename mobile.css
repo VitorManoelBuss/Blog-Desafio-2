@@ -147,6 +147,372 @@ nav > div {
 
 
 
+/*SHOP*/
+.shop{
+  max-width: 400px;
+  margin: auto;
+  padding: 1rem;
+  text-align: left;
+}
+
+.shop h1{
+  color: #101828;
+  margin: 20px auto;
+  border-bottom: 0.2px solid lightgrey;
+  padding-bottom: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between; 
+}
+
+.search {
+  margin-left: auto; 
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.shop p {
+  color: #000000;
+  font-weight: 500;
+  size: 15px;
+  margin-block-end: 1rem;
+}
+
+.categories {
+  margin-bottom: 20px;
+  display: flex; /* Ativa o layout flexível */
+  justify-content: space-between;
+  gap: 10px; /* Adiciona espaçamento entre os botões */
+  flex-wrap: wrap; /* Permite quebra de linha caso necessário */
+}
+
+.categories button {
+  display: block; /* Mantém os botões no layout correto */
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.categories button.active {
+  background: linear-gradient(90deg, #101828, #233250);
+  color: white;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  display: none;
+  width: 100%;
+  margin: 10px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+
+.product:hover img {
+  filter: brightness(60%);
+}
+
+.product-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza nome e descrição */
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 20px;
+  text-align: center;
+}
+
+.product:hover .product-info {
+  opacity: 1;
+}
+
+.product-info h3 {
+  margin: 5px 0;
+  font-size: 25px; /* Ajusta tamanho do título */
+  font-weight: 500;
+}
+
+.product-info p {
+  font-size: 12px; /* Ajusta tamanho da descrição */
+  margin-bottom: 15px;
+  color: white;
+}
+
+.product-info .price {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.product-info .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px; /* Fixa os botões na parte inferior */
+}
+
+.btn {
+  background: linear-gradient(90deg, #101828, #233250);;
+  color: white;
+  padding: 8px 23px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 200;
+  text-align: center;
+}
+
+.btn-quantity {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #101828, #233250);
+  border-radius: 5px;
+  padding: 2.5px 5px;
+  color: white;
+  gap: 10px;
+}
+
+.quantity-control span {
+  font-size: 13px; /* Diminui o número */
+  font-weight: 400;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Estiliza o coração no canto superior direito */
+.product {
+  position: relative; /* Importante para posicionar o botão */
+}
+
+.favorite {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.favorite svg {
+  width: 20px; /* Ajuste o tamanho conforme necessário */
+  height: 18px;
+}
+
+.favorite svg path {
+  fill: transparent; /* Mantém o coração sem preenchimento */
+  stroke: white; /* Cor das bordas */
+  transition: fill 0.3s ease-in-out;
+}
+
+.favorite.active svg path {
+  fill: white; /* Preenche o coração ao clicar */
+}
+
+
+
+
+
+/*SERVICES*/
+.service-section {
+  max-width: 400px;
+  margin: auto;
+  padding: 1rem;
+  text-align: left;
+}
+
+.service-section h1 {
+    color: #101828;
+    margin: 20px auto;
+    border-bottom: 0.2px solid lightgrey;
+    padding-bottom: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.service-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out; /* Suaviza o efeito ao escurecer */
+}
+
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); /* Invisível por padrão */
+  transition: background 0.3s ease-in-out;
+}
+
+.service-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+}
+
+.service-content {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  opacity: 0; 
+  transition: 0.3s ease-in-out;
+  width: 100%; /* Ou um valor maior, como 80% */
+  max-width: 800px; /* Ajuste conforme necessário */
+  text-align: center; /* Mantém o texto centralizado */
+  margin: 0 auto; /* Centraliza o container */
+}
+
+.service-content p {
+  font-size: 12px;
+  width: 100%; /* O texto ocupará todo o espaço disponível */
+  max-width: 600px; /* Ajuste para não ficar muito largo */
+  display: block; /* Garante que o elemento respeite a largura */
+  text-align: justify;
+  padding: 0.8rem;
+}
+
+.service-content button {
+  background-color: #ffffff;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.full-width {
+  grid-column: span 2; /* Ocupa duas colunas */
+  height: 140px; /* Reduz a altura da última imagem */
+  position: relative;
+}
+
+.service-content button {
+  background: linear-gradient(90deg, #101828, #233250);
+  color: white;
+  white-space: nowrap; 
+  display: inline-block; 
+  width: auto; 
+  min-width: max-content;
+  margin-block-end: 10px;
+}
+
+.service-content button:hover {
+  background: linear-gradient(90deg, #101828, #233250);
+  color: white;
+  white-space: nowrap; 
+  display: inline-block;
+  width: auto; 
+  min-width: max-content; 
+}
+
+.service-label p {
+  width: 80%; /* Define uma largura maior */
+  text-align: center; /* Mantém o texto centralizado */
+  white-space: normal; /* Permite que o texto quebre em várias linhas */
+  word-wrap: break-word; /* Garante que o texto se ajuste dentro do espaço disponível */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Efeito hover */
+.service-item:hover img {
+  filter: brightness(0.5); /* Escurece a imagem */
+}
+
+.service-item:hover .service-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Aparece o overlay escuro */
+}
+
+.service-item:hover .service-label {
+  top: 20%; /* Faz o título subir um pouco */
+}
+
+.service-item:hover .service-content {
+  opacity: 1; /* Mostra o texto e o botão */
+}
+
+
+
+
+
+
 /*ABOUT US*/
 .about-us {
   background-color: #ffffff; 
@@ -266,14 +632,14 @@ nav > div {
 }
 
 .team h1 {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.5rem;
   color: #101828;
-  margin-bottom: 1.5rem;
+  margin: 20px auto;
   border-bottom: 0.2px solid lightgrey;
   padding-bottom: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .team-member-list {
@@ -623,4 +989,43 @@ input:focus, textarea:focus {
   gap: 1.5rem;
   justify-content: center;
   margin-block-end: 1rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 80vh; /* Reduz a altura para não ocupar tudo */
+    padding: 100px 10%;
+    background-position: center;
+    align-items: flex-start;
+  }
+
+  .hero h2,
+  .hero p {
+    width: 600px; /* Aumenta a largura para telas maiores */
+  }
+
+  .cta-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+      flex-direction: row;
+      text-align: left;
+      justify-content: space-between;
+      padding: 150px;
+  }
+
+  .hero h2 {
+      font-size: 3.5rem;
+      max-width: 700px;
+  }
+
+  .hero p {
+      font-size: 1.5rem;
+      max-width: 700px;
+  }
 }
