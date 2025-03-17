@@ -468,9 +468,14 @@ nav > div {
     padding: 2rem;
   }
 
+
   .shop h1 {
-    font-size: 1.5rem;
+    font-size: 35px;
     margin: 30px auto;
+  }
+
+  .shop p {
+    font-size: 35px;
   }
 
   .categories {
@@ -556,7 +561,7 @@ nav > div {
 
 .service-section h1 {
   color: #101828;
-  margin: 20px auto;
+  margin: 30px auto;
   border-bottom: 0.2px solid lightgrey;
   padding-bottom: 1rem;
   font-weight: 500;
@@ -687,6 +692,10 @@ nav > div {
 
 /* Desktop styles */
 @media screen and (min-width: 1024px) {
+  .service-section h1{
+    font-size: 35px;
+  }
+
   .service-section {
       max-width: 1200px;
       padding: 2rem;
@@ -754,13 +763,24 @@ nav > div {
 
 .about-us h1 {
   color: #101828;
-  margin: 20px auto;
-  border-bottom: 0.2px solid lightgrey;
+  position: relative;
+  margin: 0 auto 20px;
   padding-bottom: 1rem;
   font-weight: 500;
   display: flex;
   align-items: center; 
-  gap: 15px; 
+  gap: 15px;
+  width: 100%;
+}
+
+.about-us h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #E4E7EC;
 }
 
 .about-us p {
@@ -768,7 +788,7 @@ nav > div {
   font-weight: 400;
   color: #667085;
   line-height: 1.6;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
   text-align: left;
 }
 
@@ -776,6 +796,58 @@ nav > div {
   margin-bottom: 0;
 }
 
+.about-us-images {
+  display: none;
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .about-us {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 40px;
+    margin: 40px auto;
+    box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  }
+
+  .about-us h1 {
+    grid-column: 1 / -1;
+    margin: 0 auto 32px;
+    font-size: 35px;
+    width: 100%;
+  }
+
+  .about-us-images {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    grid-column: 2;
+    grid-row: 2 / span 5;
+    align-self: start;
+    position:relative;
+    top: 150px;
+  }
+
+  .about-us-images img {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+    background-color: #F9FAFB;
+  }
+
+  .about-us p {
+    margin-bottom: 28px;
+    font-size: 21px;
+    line-height: 1.7;
+    color: #475467;
+  }
+
+  .about-us p:last-child {
+    margin-bottom: 0;
+  }
+}
 
 
 
