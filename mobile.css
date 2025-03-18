@@ -290,14 +290,14 @@ nav > div {
 
 .categories {
   margin-bottom: 20px;
-  display: flex; /* Ativa o layout flexível */
+  display: flex;
   justify-content: space-between;
-  gap: 10px; /* Adiciona espaçamento entre os botões */
-  flex-wrap: wrap; /* Permite quebra de linha caso necessário */
+  gap: 10px; 
+  flex-wrap: wrap; 
 }
 
 .categories button {
-  display: block; /* Mantém os botões no layout correto */
+  display: block; 
   padding: 8px;
   border: none;
   cursor: pointer;
@@ -346,7 +346,7 @@ nav > div {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza nome e descrição */
+  justify-content: center; 
   align-items: center;
   color: white;
   opacity: 0;
@@ -361,12 +361,12 @@ nav > div {
 
 .product-info h3 {
   margin: 5px 0;
-  font-size: 25px; /* Ajusta tamanho do título */
+  font-size: 25px;
   font-weight: 500;
 }
 
 .product-info p {
-  font-size: 12px; /* Ajusta tamanho da descrição */
+  font-size: 12px; 
   margin-bottom: 15px;
   color: white;
 }
@@ -388,7 +388,7 @@ nav > div {
   align-items: center;
   gap: 10px;
   position: absolute;
-  bottom: 20px; /* Fixa os botões na parte inferior */
+  bottom: 20px; 
 }
 
 .btn {
@@ -422,7 +422,7 @@ nav > div {
 }
 
 .quantity-control span {
-  font-size: 13px; /* Diminui o número */
+  font-size: 13px; 
   font-weight: 400;
 }
 
@@ -432,9 +432,9 @@ nav > div {
   align-items: center;
 }
 
-/* Estiliza o coração no canto superior direito */
+
 .product {
-  position: relative; /* Importante para posicionar o botão */
+  position: relative; 
 }
 
 .favorite {
@@ -447,21 +447,20 @@ nav > div {
 }
 
 .favorite svg {
-  width: 20px; /* Ajuste o tamanho conforme necessário */
+  width: 20px; 
   height: 18px;
 }
 
 .favorite svg path {
-  fill: transparent; /* Mantém o coração sem preenchimento */
-  stroke: white; /* Cor das bordas */
+  fill: transparent; 
+  stroke: white;
   transition: fill 0.3s ease-in-out;
 }
 
 .favorite.active svg path {
-  fill: white; /* Preenche o coração ao clicar */
+  fill: white; 
 }
 
-/* Desktop styles */
 @media screen and (min-width: 1024px) {
   .shop {
     max-width: 1200px;
@@ -536,7 +535,7 @@ nav > div {
   }
 }
 
-/* Additional breakpoint for larger screens */
+
 @media screen and (min-width: 1440px) {
   .shop {
     max-width: 1400px;
@@ -690,7 +689,7 @@ nav > div {
   opacity: 1;
 }
 
-/* Desktop styles */
+
 @media screen and (min-width: 1024px) {
   .service-section h1{
     font-size: 35px;
@@ -717,7 +716,7 @@ nav > div {
       border-radius: 8px;
   }
 
-  /* Specific grid placements */
+  
   .service-item:nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
   .service-item:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
   .service-item:nth-child(3) { grid-area: 2 / 2 / 3 / 3; }
@@ -738,7 +737,6 @@ nav > div {
       font-size: 28px;
   }
 
-  /* Remove full-width styles for desktop */
   .full-width {
       grid-column: auto;
       height: 100%;
@@ -920,6 +918,99 @@ nav > div {
   background: linear-gradient(90deg, #233250, #101828);
 }
 
+.blog-post-images {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .blog {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 40px;
+    margin: 40px auto;
+    box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  }
+
+  .blog h1 {
+    grid-column: 1 / -1;
+    margin: 0 auto 32px;
+    font-size: 35px;
+    width: 100%;
+  }
+
+  .blog h2.t1{
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .blog h2.t2{
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .read-more{
+    width: 149px;
+    height: 60px;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+
+  .blog-post-images {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    grid-column: 2;
+    grid-row: 2 / span 5;
+    align-self: start;
+    position:relative;
+    top: 30px;
+  }
+
+  .blog-post-images img {
+    width: 508px;
+    height: 650px;
+    object-fit: cover;
+    background-color: #F9FAFB;
+    margin-inline-start: 5rem;
+  }
+
+  .blog p {
+    margin-bottom: 28px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #475467;
+    text-align: justify;
+  }
+
+  .blog p:last-child {
+    margin-bottom: 0;
+  }
+
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-button::before {
+    content: "▶";
+    font-size: 32px;
+    color: white;
+    margin-left: 5px;
+}
+}
+
 
 
 
@@ -978,6 +1069,47 @@ nav > div {
   gap: 10px; 
   justify-content: center;
   margin-top: 10px; 
+}
+
+@media (min-width: 1024px) {
+
+  .team{
+    padding: 40px;
+  }
+
+  .team-member-list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center;
+}
+
+  .team-member {
+      text-align: center; 
+      flex: 1; 
+      min-width: 200px; 
+      max-width: 250px; 
+  }
+
+  .team-member img{
+    width: 235px;
+    height: 296px;
+  }
+
+  .team-member h2{
+    text-align: start;
+    margin-block-end: 10px;
+  }
+
+  .team-member p{
+    text-align: start;
+    margin-block-end: 20px;
+  }
+
+  .social-icons-profile{
+    justify-content: start;
+  }
+
 }
 
 
@@ -1243,10 +1375,10 @@ input:focus, textarea:focus {
 
 .footer-columns {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas de tamanho igual */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 2rem;
-  max-width: 800px; /* Define uma largura máxima para manter o layout organizado */
-  margin: auto; /* Centraliza no rodapé */
+  max-width: 800px; 
+  margin: auto;
 }
 
 .footer-column h3 {
