@@ -1072,7 +1072,6 @@ nav > div {
 }
 
 @media (min-width: 1024px) {
-
   .team{
     padding: 40px;
   }
@@ -1094,6 +1093,10 @@ nav > div {
   .team-member img{
     width: 235px;
     height: 296px;
+  }
+
+  .team h1{
+    font-size: 35px;
   }
 
   .team-member h2{
@@ -1291,6 +1294,43 @@ input:focus, textarea:focus {
   align-items: center;
 }
 
+@media (min-width: 1024px){
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    width: 100vw; 
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+  }
+
+  
+  .contact h1 {
+      grid-column: 1 / -1; 
+      text-align: center; 
+      width: 100%;
+      margin-bottom: 1rem;
+      font-size: 35px;
+  }
+
+  
+  .contact-form {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      width: 450px;
+      height: 375px;
+  }
+
+  
+  .contact-info {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      width: 100%;
+  }
+}
+
 
 
 
@@ -1346,6 +1386,50 @@ input:focus, textarea:focus {
 
 .subscribe-button:hover {
   background-color: #f3f4f6;
+}
+
+@media (min-width: 1024px){
+  .newsletter {
+    grid-column: span 2;
+    text-align: start;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+ 
+  
+  .newsletter h2, 
+  .newsletter p {
+      margin: 1rem;
+  }
+
+  .newsletter form {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem; 
+  }
+
+  .email-input {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      width: 250px;
+      background-color: #d1d1d1; 
+      margin-bottom: 0px;
+  }
+
+  .subscribe-button {
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: white;
+      cursor: pointer;
+  }
 }
 
 
@@ -1422,3 +1506,38 @@ input:focus, textarea:focus {
   justify-content: center;
   margin-block-end: 1rem;
 }
+
+@media (min-width: 1024px){
+.footer{
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.footer-content{
+  display: flex;
+}
+
+.footer-columns{
+  display: flex;
+  gap: 50px;
+}
+
+.footer-columns h3{
+  margin-block-end: 15px;
+}
+
+.footer-columns li{
+  margin-block-end: 15px;
+}
+
+.footer-bottom{
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 40px 0 40px;
+}
+
+.h2-p{
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+} 
